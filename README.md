@@ -58,17 +58,22 @@ I should first ask "is there anything blocking me?"
 
 ---
 
-## Date: Thursday, May 28, 2026
+Date: Thursday, May 28, 2026
+Topic: Section 5 — EC2 Fundamentals (17/17 ✅)
+Key concepts covered:
 
-### Topic: Section 5 — EC2 Fundamentals (17/17 ✅)
+EC2 (Elastic Compute Cloud) — virtual server provisioning as Infrastructure as a Service (IaaS)
+EC2 instance types — General Purpose, Compute Optimized, Memory Optimized, Storage Optimized
+Security Groups — network-level firewall controlling inbound and outbound traffic for EC2 instances
+SSH — secure remote access to Linux-based EC2 instances
+EC2 purchasing options — On-Demand, Reserved, Spot, Dedicated Hosts
 
-### What I learned today:
-- EC2 = Virtual servers in the cloud
-- Security Groups = Virtual firewall controlling inbound/outbound traffic
-- SSH = Secure remote connection to EC2 instances
-- IAM Roles on EC2 = Grant permissions without storing credentials
-- Purchasing Options = On-Demand, Reserved, Spot, Dedicated
-- Spot Instances = Cheapest option but can be interrupted
+Hands on:
 
-### Progress today:
-- Finished Section 5 — 17/17 ✅
+Launched an EC2 instance with a bootstrap script via User Data
+Configured Security Group inbound rules for HTTP and SSH access
+Established SSH connection to a running EC2 instance from Windows
+
+Progress today:
+
+Finished Section 5 — 17/17 ✅
