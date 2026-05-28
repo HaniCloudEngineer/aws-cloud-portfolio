@@ -9,7 +9,7 @@ Documenting every step of the journey here.
 
 ## Learning Journey
 
-## Date: Tuesday, May 27, 2026
+## Date: Wednesday, May 27, 2026
 ### Topic: Section 4 — IAM & AWS CLI (21/21 ✅)
 
 ### What I learned today:
@@ -55,3 +55,20 @@ can ever bypass a security block.
 It changed how I think about permissions —
 instead of asking "do I have access?",
 I should first ask "is there anything blocking me?"
+
+---
+
+## Date: Thursday, May 28, 2026
+
+### Topic: Section 5 — EC2 Fundamentals (17/17 ✅)
+
+### What I learned today:
+- EC2 = Virtual servers in the cloud
+- Security Groups = Virtual firewall controlling inbound/outbound traffic
+- SSH = Secure remote connection to EC2 instances
+- IAM Roles on EC2 = Grant permissions without storing credentials
+- Purchasing Options = On-Demand, Reserved, Spot, Dedicated
+- Spot Instances = Cheapest option but can be interrupted
+
+### Progress today:
+- Finished Section 5 — 17/17 ✅
