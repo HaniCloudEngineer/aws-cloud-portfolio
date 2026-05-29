@@ -77,3 +77,27 @@ Established SSH connection to a running EC2 instance from Windows
 Progress today:
 
 Finished Section 5 — 17/17 ✅
+
+## Date: Thursday, May 29, 2026
+### Topic: Section 6 — EC2 Solutions Architect Level (10/10 ✅)
+
+### What I learned today:
+
+- IPv4 vs IPv6: IPv4 is the standard (e.g. 192.168.1.1),
+  IPv6 is newer and handles far more addresses
+- Public IP: accessible from the internet, changes on restart
+- Private IP: only accessible within the internal network
+- Elastic IP: a fixed public IP you reserve — survives instance
+  restarts and can be reassigned between instances
+- Placement Groups: control how EC2 instances are physically
+  placed across AWS hardware
+  - Cluster → low latency, same rack (high risk)
+  - Spread → each instance on different hardware (high availability)
+  - Partition → groups of instances isolated from each other
+- ENI (Elastic Network Interface): a virtual network card
+  you can attach/detach from instances — useful for failover
+- EC2 Hibernate: saves the RAM state to disk so the instance
+  resumes exactly where it stopped — faster than a full restart
+
+### Progress today:
+- Finished Section 6 — 10/10 ✅
