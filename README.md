@@ -101,3 +101,84 @@ Finished Section 5 — 17/17 ✅
 
 ### Progress today:
 - Finished Section 6 — 10/10 ✅
+
+- ## Date: saturday, May 30, 2026
+### Topic: Section 7 — EC2 Instance Storage (16/16 ✅)
+
+### What I learned today:
+
+- EBS (Elastic Block Store): a network drive you attach to
+  your EC2 instance — persists data even after instance stops
+  - Locked to one Availability Zone
+  - Can take snapshots and move them across regions
+- EBS Snapshots: a backup of your EBS volume at a point in time
+  - Can copy snapshots to another region for disaster recovery
+- AMI (Amazon Machine Image): a custom image of your instance
+  - You can build your own AMI with pre-installed software
+  - Faster launch time than installing everything from scratch
+- EC2 Instance Store: physical storage attached directly to
+  the host machine — extremely fast but data is lost on stop
+  - Use for temporary data only, not for long-term storage
+- EBS Volume Types:
+  - gp2/gp3 → general purpose SSD (most common)
+  - io1/io2 → high performance SSD (databases)
+  - st1 → throughput HDD (big data)
+  - sc1 → cold HDD (infrequent access)
+- EBS Multi-Attach: attach one EBS volume to multiple
+  instances at the same time (io1/io2 only)
+- EBS Encryption: encrypts data at rest and in transit
+  — minimal performance impact
+- Amazon EFS (Elastic File System): a shared network file
+  system — multiple instances can access it simultaneously
+  - Works across multiple Availability Zones
+- EFS vs EBS:
+  - EBS → one instance, one AZ
+  - EFS → many instances, many AZs, higher cost
+
+### Progress today:
+- Finished Section 7 — 16/16 ✅
+
+- ## Date: Sunday, May 31, 2026
+### Topic: Section 8 — High Availability, ELB & ASG (18/18 ✅)
+
+### What I learned today:
+
+- High Availability vs Scalability:
+  - Scalability → handle more load (vertical = bigger instance,
+    horizontal = more instances)
+  - High Availability → survive a data center failure
+    (run in multiple AZs)
+
+- ELB (Elastic Load Balancer): distributes traffic across
+  multiple EC2 instances automatically
+  - Managed by AWS — no maintenance required
+
+- Types of Load Balancers:
+  - ALB (Application) → HTTP/HTTPS, routes by URL/path,
+    best for web apps
+  - NLB (Network) → ultra-high performance, TCP/UDP,
+    handles millions of requests per second
+  - GWLB (Gateway) → routes traffic through
+    third-party security appliances
+
+- Sticky Sessions: locks a user to the same instance
+  — useful when session data is stored locally
+
+- Cross-Zone Load Balancing: distributes traffic evenly
+  across all instances in all AZs
+
+- SSL Certificates: encrypt traffic between client and
+  load balancer (HTTPS)
+
+- Connection Draining: gives existing connections time
+  to complete before removing an instance
+
+- ASG (Auto Scaling Group): automatically adds or removes
+  EC2 instances based on load
+  - Scale out → add instances
+  - Scale in → remove instances
+  - Scaling Policies: target tracking, step scaling,
+    scheduled scaling
+
+### Progress today:
+- Finished Section 8 — 18/18 ✅
