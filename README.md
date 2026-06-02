@@ -182,3 +182,55 @@ Finished Section 5 — 17/17 ✅
 
 ### Progress today:
 - Finished Section 8 — 18/18 ✅
+
+ ## Date: Monday, June 1, 2026
+### Topic: Section 9 — RDS, Aurora & ElastiCache (16/16 ✅)
+
+### What I learned today:
+
+- RDS (Relational Database Service): managed SQL database
+  service — supports MySQL, PostgreSQL, Oracle, SQL Server
+  - AWS handles backups, patching, and maintenance
+  - Cannot SSH into the instance
+
+- RDS Read Replicas vs Multi-AZ:
+  - Read Replicas → improve read performance,
+    can be in different regions
+  - Multi-AZ → disaster recovery only,
+    standby instance takes over automatically on failure
+
+- RDS Custom: gives you access to the underlying OS
+  — only for Oracle and SQL Server
+
+- Amazon Aurora: AWS proprietary database
+  - Compatible with MySQL and PostgreSQL
+  - 5x faster than MySQL, 3x faster than PostgreSQL
+  - Storage auto-scales up to 128TB
+  - High availability built-in across 3 AZs
+
+- RDS & Aurora Backup:
+  - Automated backups — point in time recovery
+  - Manual snapshots — kept as long as you want
+
+- RDS Security:
+  - Encryption at rest and in transit
+  - IAM authentication supported
+  - Security Groups control network access
+
+- RDS Proxy: sits between app and database
+  - Reduces database connections
+  - Improves failover time by up to 66%
+
+- ElastiCache: managed in-memory database
+  - Redis → supports persistence, replication, backups
+  - Memcached → pure cache, no persistence, simpler
+  - Used to reduce database load for read-heavy workloads
+
+- List of Ports to know:
+  - MySQL/Aurora → 3306
+  - PostgreSQL → 5432
+  - Oracle → 1521
+  - MSSQL → 1433
+
+### Progress today:
+- Finished Section 9 — 16/16 ✅ 
