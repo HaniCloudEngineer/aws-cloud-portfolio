@@ -284,3 +284,50 @@ Finished Section 5 — 17/17 ✅
 
 ### Progress today:
 - Finished Section 10 — 21/21 ✅
+
+- ## Date: Wednesday, June 3, 2026
+### Topic: Section 11 — Classic Solutions Architecture (8/8 ✅)
+
+### What I learned today:
+
+- This section was different — instead of learning new services,
+  it combined everything learned so far into real-world scenarios.
+  This is exactly how the exam thinks.
+
+- WhatsTheTime.com scenario:
+  - Started with a single EC2 instance
+  - Added Elastic IP → then Route 53
+  - Added Auto Scaling Group + Load Balancer
+  - Lesson: always design for scalability from the start
+
+- MyClothes.com scenario:
+  - Stateful web app — needed to handle user sessions
+  - Used ElastiCache to store session data
+  - Used RDS for the database with Read Replicas
+  - Lesson: separate state from the application layer
+
+- MyWordPress.com scenario:
+  - Needed shared storage across multiple instances
+  - Used EFS to share files across all EC2 instances
+  - Lesson: EFS when multiple instances need the same files
+
+- Instantiating Applications Quickly:
+  - EC2: use Golden AMI (pre-installed software)
+  - RDS: restore from snapshot instead of rebuilding
+  - EBS: restore from snapshot for faster setup
+  - Lesson: never build from scratch in production
+
+- Elastic Beanstalk: AWS managed platform for deploying
+  web applications
+  - You provide the code — AWS handles everything else
+  - Supports multiple environments (dev, staging, prod)
+  - Free service — you only pay for the resources it creates
+
+### Something I found interesting:
+- Seeing all services working together in one architecture
+  made everything click — EC2, ELB, ASG, RDS, ElastiCache,
+  EFS, and Route 53 are not separate topics,
+  they are one system.
+
+### Progress today:
+- Finished Section 11 — 8/8 ✅
