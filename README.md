@@ -233,4 +233,54 @@ Finished Section 5 — 17/17 ✅
   - MSSQL → 1433
 
 ### Progress today:
-- Finished Section 9 — 16/16 ✅ 
+- Finished Section 9 — 16/16 ✅
+
+- ## Date: Tuesday, June 2, 2026
+### Topic: Section 10 — Route 53 (21/21 ✅)
+
+### What I learned today:
+
+- DNS (Domain Name System): translates domain names
+  into IP addresses — like a phone book for the internet
+
+- Route 53: AWS managed DNS service
+  - Can register domains directly through AWS
+  - Routes users to the closest or healthiest endpoint
+
+- TTL (Time To Live): how long a DNS record is cached
+  - High TTL → less queries, but slower updates
+  - Low TTL → more queries, but faster updates
+
+- CNAME vs Alias:
+  - CNAME → points a domain to another domain,
+    cannot be used on root domain (e.g. example.com)
+  - Alias → AWS specific, works on root domain,
+    free of charge, supports AWS resources directly
+
+- Routing Policies:
+  - Simple → single resource, no health checks
+  - Weighted → split traffic by percentage
+    (e.g. 70% to v1, 30% to v2)
+  - Latency → routes to the region with lowest latency
+  - Failover → primary and secondary instance,
+    switches automatically if primary fails
+  - Geolocation → routes based on user's country/region
+  - Geoproximity → routes based on geographic distance,
+    can shift traffic with a bias value
+  - IP-based → routes based on user's IP address
+  - Multi Value → returns multiple healthy records,
+    not a substitute for a load balancer
+
+- Health Checks: monitors endpoint availability
+  - Can trigger failover automatically
+  - Can monitor other health checks (calculated)
+
+- 3rd Party Domains: you can buy a domain elsewhere
+  and point it to Route 53 nameservers
+
+- Route 53 Resolvers & Hybrid DNS:
+  - Inbound Resolver → allows on-premises to query Route 53
+  - Outbound Resolver → allows Route 53 to query on-premises
+
+### Progress today:
+- Finished Section 10 — 21/21 ✅
