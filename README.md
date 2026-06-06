@@ -441,3 +441,71 @@ Finished Section 5 — 17/17 ✅
 
 ### Progress today:
 - Finished Section 13 — 9/9 ✅
+
+- ## Date: Saturday, June 6, 2026
+### Topic: Section 14 — Amazon S3 Security (16/16 ✅)
+
+### What I learned today:
+
+- S3 Encryption:
+  - SSE-S3 → AWS manages the keys, enabled by default
+  - SSE-KMS → you control the keys via AWS KMS,
+    extra security and audit trail
+  - SSE-C → you provide your own keys,
+    AWS does not store them
+  - Client-Side Encryption → encrypt before uploading,
+    AWS never sees the data unencrypted
+  - DSSE-KMS → dual-layer encryption with KMS keys
+
+- S3 Default Encryption:
+  - SSE-S3 is applied automatically to all new objects
+  - Can be changed to SSE-KMS at bucket level
+
+- S3 CORS (Cross-Origin Resource Sharing):
+  - Controls which domains can access your S3 bucket
+    from a browser
+  - Must configure CORS rules if your website fetches
+    data from a different S3 bucket
+
+- S3 MFA Delete:
+  - Requires MFA to permanently delete object versions
+  - Extra protection against accidental or malicious deletion
+  - Only the root account can enable it
+
+- S3 Access Logs:
+  - Log all requests made to your S3 bucket
+  - Stored in a separate S3 bucket
+  - Useful for auditing and security analysis
+
+- S3 Pre-signed URLs:
+  - Generate a temporary URL to grant access to
+    a specific object for a limited time
+  - Use case: share a private file without making
+    the bucket public
+
+- Glacier Vault Lock & S3 Object Lock:
+  - Object Lock → prevent object deletion for a set time
+    - Retention Mode Compliance → no one can delete,
+      not even root
+    - Retention Mode Governance → only privileged
+      users can delete
+  - Glacier Vault Lock → WORM policy
+    (Write Once Read Many) for compliance
+
+- S3 Access Points:
+  - Simplify access management for large S3 buckets
+  - Each team or app gets its own access point
+    with its own policy
+
+- S3 Object Lambda:
+  - Run Lambda function on S3 objects before
+    they are returned to the requester
+  - Use case: transform or filter data on the fly
+
+### Something important for the exam:
+- Know the difference between all encryption types —
+  SSE-S3 vs SSE-KMS vs SSE-C is a very common
+  exam question.
+
+### Progress today:
+- Finished Section 14 — 16/16 ✅
