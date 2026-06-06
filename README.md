@@ -331,3 +331,63 @@ Finished Section 5 — 17/17 ✅
 
 ### Progress today:
 - Finished Section 11 — 8/8 ✅
+
+## Date: Thursday, June 4, 2026
+### Topic: Section 12 — Amazon S3 Introduction (15/15 ✅)
+
+### What I learned today:
+
+- S3 (Simple Storage Service): object storage service
+  - Store any type of file — images, videos, backups, code
+  - Files are stored in Buckets (like folders)
+  - Bucket names must be globally unique
+  - Max object size: 5TB
+
+- S3 Security — Bucket Policy:
+  - JSON based policy attached to the bucket
+  - Controls who can access the bucket and how
+  - Can allow public access or restrict to specific users
+
+- S3 Website Hosting:
+  - S3 can host static websites directly
+  - Just enable static website hosting on the bucket
+  - Must make bucket public via Bucket Policy
+
+- S3 Versioning:
+  - Keeps multiple versions of the same file
+  - Protects against accidental deletion
+  - Must be enabled at the bucket level
+
+- S3 Replication:
+  - CRR (Cross Region Replication) → replicate to
+    a different region, used for compliance or latency
+  - SRR (Same Region Replication) → replicate within
+    same region, used for log aggregation
+  - Versioning must be enabled on both buckets
+
+- S3 Storage Classes:
+  - S3 Standard → frequently accessed data,
+    high availability, most expensive
+  - S3 Standard-IA → infrequently accessed,
+    lower cost, retrieval fee applies
+  - S3 One Zone-IA → same as Standard-IA
+    but stored in one AZ only, cheaper
+  - S3 Glacier Instant → archived data,
+    retrieved in milliseconds
+  - S3 Glacier Flexible → retrieved in minutes or hours
+  - S3 Glacier Deep Archive → cheapest,
+    retrieved in 12-48 hours
+  - S3 Intelligent-Tiering → automatically moves objects
+    between tiers based on access patterns
+
+- S3 Express One Zone:
+  - Highest performance storage class
+  - Single AZ, lowest latency, for latency-sensitive apps
+
+### Something important for the exam:
+- Know the difference between each storage class —
+  the exam loves to give a scenario and ask
+  which storage class is the most cost-effective.
+
+### Progress today:
+- Finished Section 12 — 15/15 ✅
