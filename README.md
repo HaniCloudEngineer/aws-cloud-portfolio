@@ -391,3 +391,53 @@ Finished Section 5 — 17/17 ✅
 
 ### Progress today:
 - Finished Section 12 — 15/15 ✅
+
+- ## Date: Friday, June 5, 2026
+### Topic: Section 13 — Advanced Amazon S3 (9/9 ✅)
+
+### What I learned today:
+
+- S3 Lifecycle Rules:
+  - Automatically transition objects between storage classes
+  - Example: move to Standard-IA after 30 days,
+    then to Glacier after 90 days
+  - Can also expire (delete) objects after a set time
+  - S3 Analytics helps decide when to transition objects
+
+- S3 Requester Pays:
+  - Normally the bucket owner pays for storage and requests
+  - With Requester Pays — the requester pays for downloads
+  - Useful when sharing large datasets with other accounts
+
+- S3 Event Notifications:
+  - Trigger actions when something happens in S3
+  - Events: object created, deleted, restored
+  - Can send to: SNS, SQS, Lambda, or EventBridge
+  - Use case: auto-process uploaded images with Lambda
+
+- S3 Performance:
+  - S3 supports 3,500 PUT and 5,500 GET requests
+    per second per prefix
+  - Multi-part upload: recommended for files over 100MB,
+    required for files over 5GB
+  - S3 Transfer Acceleration: speeds up uploads by routing
+    through AWS Edge Locations
+
+- S3 Batch Operations:
+  - Run bulk operations on existing S3 objects
+  - Examples: copy objects, encrypt unencrypted objects,
+    invoke Lambda on each object
+  - Uses S3 Inventory to get the list of objects
+
+- S3 Storage Lens:
+  - Organization-wide visibility into S3 usage
+  - Shows storage trends, costs, and activity metrics
+  - Free default dashboard or paid advanced metrics
+
+### Something important for the exam:
+- Lifecycle Rules + Storage Classes are always tested
+  together — know which class to transition to
+  and after how many days.
+
+### Progress today:
+- Finished Section 13 — 9/9 ✅
